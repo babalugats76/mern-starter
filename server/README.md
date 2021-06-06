@@ -1,7 +1,13 @@
+## Cloning this repository
+- `git clone https://github.com/babalugats76/mern-starter.git`; Alternatively, if you wanted to clone the project into 
+- Install the packages for both the client and server projects.
+   - For the `server` project, issue the following from the parent directory: `npm i`
+   - For the  `client` project: `cd client` and then `npm i`
+
 ## Deploying to Heroku
 - Edit as appropriate the `engines` values in your `package.json`
-- Create a Github project for your code, i.e., create a repo, initialize it, etc.
-- Check in your code
+- Create a Github project for this project, just as you would for any other project, i.e., create a repo, initialize it, etc.
+- Check in your code, i.e., add, commit, push, etc.
 - Login to Heroku using CLI: `heroku login`
 - Create named application using Heroku command-line utility: `heroku create colestock-mern-starter`. Afterwards, you will see it in the Heroku Dashboard. Alternatively, you can use the website GUI.
 - Set any needed production configuration values using the Heroku Dashboard. Alternatively, you can do it in the CLI, e.g., `heroku config:set mongoURI=connectstringgoeshere`
