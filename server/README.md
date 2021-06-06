@@ -5,5 +5,5 @@
 - Login to Heroku using CLI: `heroku login`
 - Create named application using Heroku command-line utility: `heroku create colestock-mern-starter`. Afterwards, you will see it in the Heroku Dashboard. Alternatively, you can use the website GUI.
 - Set any needed production configuration values using the Heroku Dashboard. Alternatively, you can do it in the CLI, e.g., `heroku config:set mongoURI=connectstringgoeshere`
-- Add Heroku remote: `git remote add heroku`
+- Deploy to Heroku: `git push heroku main`
 
