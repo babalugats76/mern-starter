@@ -5,6 +5,14 @@
    - For the  `client` project: `cd client` and then `npm i`
 
 ## Testing the Project
+- Create a `server/config/dev.js` and store your Mongo URI:
+
+```
+// dev.js -- don't commit!
+module.exports = {
+  mongoURI: "mongodb+srv://<username>:<password>@<host>/<db and/or options>",
+};
+```
 - To test: `npm run dev`
 
 ## Deploying to Heroku
