@@ -7,7 +7,7 @@
 
 ## Testing the Project
 
-- Create a `server/config/dev.js` and store your Mongo URI:
+- Create `server/config/dev.js` and store your Mongo URI:
 
 ```
 // dev.js -- don't commit!
@@ -16,7 +16,7 @@ module.exports = {
 };
 ```
 
-- Create a collections named `todos` in your MongoDB database
+- Create a collection named `todos` in your MongoDB database
 - Populate your `todos` collection with a sample data of the following form:
 
 ```
