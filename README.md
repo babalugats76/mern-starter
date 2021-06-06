@@ -1,10 +1,12 @@
 ## Cloning this repository
+
 - `git clone https://github.com/babalugats76/mern-starter.git`; Alternatively, if you wanted to clone the project into a directory with a name of your choosing `git clone https://github.com/babalugats76/mern-starter.git my-project-name`
 - Install the packages for both the client and server projects.
-   - For the `server` project, issue the following from the parent directory: `npm i`
-   - For the  `client` project: `cd client` and then `npm i`
+  - For the `server` project, issue the following from the parent directory: `npm i`
+  - For the `client` project: `cd client` and then `npm i`
 
 ## Testing the Project
+
 - Create a `server/config/dev.js` and store your Mongo URI:
 
 ```
@@ -12,6 +14,22 @@
 module.exports = {
   mongoURI: "mongodb+srv://<username>:<password>@<host>/<db and/or options>",
 };
+```
+
+- Create a collections named `todos` in your MongoDB database
+- Populate your `todos` collection with a sample data of the following form:
+
+```
+{
+   "id":{
+      "$numberInt":"1"
+   },
+   "userId":{
+      "$numberInt":"4"
+   },
+   "title":"Wash the Dog",
+   "completed":true
+}
 ```
 - To test: `npm run dev`
 
@@ -24,3 +42,4 @@ module.exports = {
 - Set any needed production configuration values using the Heroku Dashboard. Alternatively, you can do it in the CLI, e.g., `heroku config:set mongoURI=connectstringgoeshere`
 - Deploy to Heroku: `git push heroku main`
 
+```
