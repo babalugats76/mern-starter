@@ -1,20 +1,41 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// modules
+const express = require("express");
+const logger = require("morgan");
+const path = require("path");
+const mongoose = require("mongoose");
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// configuration
+const keys = require("./config/keys");
 
-var app = express();
+// models
+require("./models/Todo"); // Example Model
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// mongoDB connection
+mongoose.connect(keys.mongoURI, {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// instance of express
+const app = express();
+
+// configure express
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: "50mb" }));
+app.use(logger("dev"));
+
+// routes
+require("./routes/todos")(app); // example
+
+// statically serve SPA (in production)
+if (process.env.NODE_ENV === "production") {
+  const path = require("path");
+  app.use(express.static(path.resolve(__dirname, "../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+  });
+}
 
 module.exports = app;
