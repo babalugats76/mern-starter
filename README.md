@@ -4,6 +4,9 @@
    - For the `server` project, issue the following from the parent directory: `npm i`
    - For the  `client` project: `cd client` and then `npm i`
 
+## Testing the Project
+- To test: `npm run dev`
+
 ## Deploying to Heroku
 - Edit as appropriate the `engines` values in your `package.json`
 - Create a Github project for this project, just as you would for any other project, i.e., create a repo, initialize it, etc.
