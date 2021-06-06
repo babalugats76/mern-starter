@@ -31,7 +31,7 @@ module.exports = {
    "completed":true
 }
 ```
-- To test: `npm run dev`
+- To test locally: `npm run dev`
 
 ## Deploying to Heroku
 - Edit as appropriate the `engines` values in your `package.json`
@@ -41,5 +41,6 @@ module.exports = {
 - Create named application using Heroku command-line utility: `heroku create colestock-mern-starter`. Afterwards, you will see it in the Heroku Dashboard. Alternatively, you can use the website GUI.
 - Set any needed production configuration values using the Heroku Dashboard. Alternatively, you can do it in the CLI, e.g., `heroku config:set mongoURI=connectstringgoeshere`
 - Deploy to Heroku: `git push heroku main`
+- Test by navigating to the appropriate URL, e.g., `http://colestock-mern-starter.herokuapp.com/`
 
 ```
