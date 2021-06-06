@@ -1,5 +1,5 @@
 ## Cloning this repository
-- `git clone https://github.com/babalugats76/mern-starter.git`; Alternatively, if you wanted to clone the project into 
+- `git clone https://github.com/babalugats76/mern-starter.git`; Alternatively, if you wanted to clone the project into a directory with a name of your choosing `git clone https://github.com/babalugats76/mern-starter.git my-project-name`
 - Install the packages for both the client and server projects.
    - For the `server` project, issue the following from the parent directory: `npm i`
    - For the  `client` project: `cd client` and then `npm i`
